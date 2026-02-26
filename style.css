@@ -14,23 +14,32 @@ a{
 .logo{
     color: white;
     font-size: 1.5em;
+    animation: slideleft 1s ease forwards;
+
 }
 
 header{
     /* border: 1px solid red; */
     padding:3px 0px;
-    border: 1px solid yellowgreen;
+    /* border: 1px solid yellowgreen; */
+    /* border-bottom: 0.5px solid rgb(244, 237, 237); */
     display: flex;
     justify-content: space-between;
+    box-shadow: 0px 4.5px 5px grey;
 }
 
+.section{
+    margin-top: 25px;
+}
 
 h4,h3{
     color: white;
+    animation: slideright 1s ease forwards;
+   
 }
 .flex-cnt{
     color: white;
-    border: 1px solid grey;
+    /* border: 1px solid grey; */
     display: flex;
     justify-content: space-between;
     /* align-items: center;  */
@@ -38,7 +47,10 @@ h4,h3{
 }
 
 p{
-    border: 1px solid green;
+    /* border: 1px solid green;
+     */
+     max-width: 50%;
+     animation: slidetop 1s ease forwards;
 }
 
 .active{
@@ -47,20 +59,72 @@ p{
 img{
     position: relative;
     top: 10px;
-    width: 60px;
-    height: 70px;
+    right: 40%;
+    width: 70px;
+    height: 100px;
     border-radius: 50%;
+    animation: zoomin 1s ease forwards;
 }
 
 .btn{
     border-radius: 10px;
     font-weight: 600px;
     min-height:40px ;
-    box-shadow: 5px 5px 5px  green;
+    box-shadow: 5px 5px 5px rgb(121, 221, 241);
+    margin-left: 15px;
+    background-color: rgb(216, 235, 235);
+    /* animation: slideleft 1s ease forwards; */
 }
-.btn a{
+
+.social-site{
+    animation: slidetop 1s ease forwards;
+}
+/* .btn a{
     /* color: transparent; */
+/* } */
+.bx{
+    border-radius: 50%;
+    border: 2px solid rgb(215, 94, 215);
+    box-shadow: 5px 5px 10px rgb(121, 221, 241);
+    /* width: 30px; */
+    /* height: 40px; */
+    padding: 7px 20px;
+    
+}
 
+@keyframes slideleft {
+  0%{
+    transform: translateX(70px);
+  }    
+  100%{
+    transform: translateX(0px);
+  }
+}
+
+@keyframes slideright {
+    0%{
+        transform: translateX(70px);
+    }
+    100%{
+        transform: translateX(0px);
+    }
+}
+
+@keyframes slidetop {
+    0%{
+        transform: translateY(70px);
+    }
+    100%{
+        transform: translateY(0px);
+    }
 }
 
 
+@keyframes zoomin{
+    0%{
+        transform: scale(0);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
